@@ -1,0 +1,143 @@
+.custom-select {
+  position: relative;
+  width: 100%;
+
+  &__button {
+    z-index: 30;
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    padding: 5px 15px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: $color-solitude;
+
+    transition: border $trans-default, border-radius $trans-default, background-color $trans-default;
+
+    cursor: pointer;
+  }
+
+  &__text {
+    display: block;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+
+    color: $color-eclipse;
+
+    transition: color $trans-default;
+  }
+
+  &__icon {
+    transition: transform $trans-default;
+
+    svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 20px;
+      height: 20px;
+
+      color: $color-default-black;
+
+      transition: color $trans-default;
+    }
+  }
+
+  &__dropdown {
+    z-index: 20;
+
+    position: absolute;
+    display: none;
+
+    top: 0;
+
+    width: 100%;
+
+    padding-top: 35px;
+
+    border: none;
+    border-radius: 5px;
+    background-color: $color-default-white;
+    box-shadow: 0 1px 6px 0 rgba($color-free-speech-blue, 0.3);
+
+    transition: box-shadow $trans-default, opacity $trans-default, visibility $trans-default;
+
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__list {
+    width: 100%;
+    max-height: 134px;
+    margin: 0;
+    padding: 15px;
+    overflow-y: auto;
+
+    border-top: 2px solid $color-transparent;
+    border-right: 4px solid $color-transparent;
+    border-bottom: 2px solid $color-transparent;
+
+    list-style: none;
+
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      width: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 3px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 3px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 15px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 25px;
+
+    color: $color-eclipse;
+
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.is-open {
+    .custom-select__dropdown {
+      display: block;
+
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .custom-select__icon {
+      transform: rotate(180deg) translateZ(0);
+    }
+  }
+
+  input {
+    clip: rect(0 0 0 0);
+
+    height: 1px;
+    margin: -1px;
+    position: absolute;
+
+    width: 1px;
+  }
+}

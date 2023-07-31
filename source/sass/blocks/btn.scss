@@ -3,32 +3,37 @@
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
-  padding: 14px 9px;
+  padding: 12px 20px;
 
+  font-family: "Arial", sans-serif;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 16px;
-  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 18px;
 
-  border: 1px solid $color-default-white;
-  border-radius: 4px;
-  background-color: $color-summer-sky-2;
-  color: $color-default-white;
+  border: none;
+  border-radius: 5px;
+  background-color: $color-selective-yellow;
+  color: $color-resolution-blue;
 
   cursor: pointer;
   user-select: none;
 
-  transition: opacity $trans-default;
+  transition: background-color $trans-default, color $trans-default;
 
   outline: none;
 
-  &--white {
-    border: 1px solid $color-dolphin;
-    background-color: $color-default-white;
-    color: $color-black-russian-2;
+  @include vp-767 {
+    font-weight: 700;
+  }
+
+  @include vp-374 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   @include hover-focus {
-    opacity: 0.8;
+    background-color: $color-resolution-blue;
+    color: $color-selective-yellow;
   }
 }

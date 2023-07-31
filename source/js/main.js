@@ -1,7 +1,10 @@
-import {initHeaderMenu} from './modules/init-header-menu.js';
+import {initReagentCardSlider} from './modules/init-reagent-card-slider.js';
+import {initCustomSelect} from './modules/init-custom-select.js';
+
 
 window.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('load', () => {
-    initHeaderMenu();
+    initCustomSelect();
+    initReagentCardSlider();
   });
 });

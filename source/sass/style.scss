@@ -2,6 +2,7 @@
 // ---------------------------------
 
 @import "vendor/normalize";
+@import "vendor/swiper";
 
 // Global
 // ---------------------------------
@@ -16,8 +17,8 @@
 // Blocks
 // ---------------------------------
 
-@import "blocks/header";
-@import "blocks/main-nav";
-@import "blocks/footer";
 @import "blocks/btn";
-@import "blocks/intro";
+@import "blocks/breadcrumbs";
+@import "blocks/reagent-card";
+@import "blocks/counter";
+@import "blocks/custom-select";

@@ -1,0 +1,82 @@
+mixin reagent-card()
+  .reagent-card
+    .container
+      .reagent-card__wrapper
+        +breadcrumbs([
+          {
+            href: "#",
+            text: "Главная",
+          },
+          {
+            href: "#",
+            text: "Реагенты для обратного осмоса",
+          },
+          {
+            text: "Аква-ИС-1",
+            isCurrent: true
+          }
+        ])
+        h1.reagent-card__title Аква-ИС-1
+        .reagent-card__content
+          .reagent-card__slider-wrapper
+            .reagent-card__slider-main.swiper(data-slider="swiper-2")
+              .swiper-wrapper
+                .swiper-slide
+                  +picture("content", "reagent-card-big-1", "png", 386, 268, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-big-2", "png", 386, 268, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-big-3", "png", 386, 268, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-big-4", "png", 386, 268, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-big-5", "png", 386, 268, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-big-6", "png", 386, 268, "reagent-card")
+            button(type="button" data-slider-button="prev").btn-reset.reagent-card__button.reagent-card__button--prev
+              +icon("icon-arrow-left", 13, 23)
+            button(type="button" data-slider-button="next").btn-reset.reagent-card__button.reagent-card__button--next
+              +icon("icon-arrow-right", 13, 23)
+            .swiper-pagination(data-slider-pagination)
+            .reagent-card__slider-thumbs.swiper(data-slider="swiper-1")
+              .swiper-wrapper
+                .swiper-slide
+                  +picture("content", "reagent-card-small-1", "png", 80, 68, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-small-2", "png", 80, 68, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-small-3", "png", 80, 68, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-small-4", "png", 80, 68, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-small-5", "png", 80, 68, "reagent-card")
+                .swiper-slide
+                  +picture("content", "reagent-card-small-6", "png", 80, 68, "reagent-card")
+          .reagent-card__info
+            p.reagent-card__subtitle Аква-ИС-1
+            p.reagent-card__label Артикул:
+              =" "
+              span R001I
+            p.reagent-card__text Ингибитор осадкообразования (антискалант) для обратного осмоса, ингибитор коррозии
+            p.reagent-card__label Назначение
+            p.reagent-card__text Антискалант для предотвращения отложения солей жесткостина&nbsp;мембранах обратного осмоса, в&nbsp;том числев&nbsp;пищевой промышленности. Ингибитор коррозиии антискалант для питательной воды водогрейных котлов, в&nbsp;оборотных системах охлаждения и&nbsp;теплоснабжения
+          .reagent-card__additional-info
+            p.reagent-card__price Цена:
+              =" "
+              span по запросу
+            .reagent-card__form
+              form(method="get")
+                .reagent-card__quantity
+                  .reagent-card__quantity-text количество
+                  +counter()
+                .reagent-card__select
+                  +custom-select({
+                    placeholder: "Выбрать объем",
+                    optionsList: [
+                      {text: "канистра 10 л", value: "option-1"},
+                      {text: "канистра 20 л", value: "option-2"},
+                      {text: "бочка 200 л", value: "option-3"}
+                    ]
+                  })
+                +btn({type: "button", text: "Добавить в запрос"}).reagent-card__submit-button
+                a.reagent-card__link(href="#") Как купить?

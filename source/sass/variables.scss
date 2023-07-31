@@ -10,14 +10,16 @@ $color-transparent:             rgba(255, 255, 255, 0);
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
 
-$color-black-russian:           #10101d;
-$color-black-russian-2:         #2a2b30;
-$color-jaguar:                  #272733;
-$color-blue-zodiac:             #3d4050;
-$color-summer-sky:              #43abf0;
-$color-summer-sky-2:            #3e9cdc;
-$color-silver:                  #c3c3c3;
-$color-dolphin:                 #6f6d7b;
+$color-lucky-point:             #272c4c;
+$color-resolution-blue:         #273170;
+$color-eclipse:                 #3e3c3c;
+$color-selective-yellow:        #ffba00;
+$color-hawkes-blue:             #cbd4ec;
+$color-free-speech-blue:        #4555b9;
+$color-silver:                  #c5c5c5;
+$color-suva-grey:               #8e8e8e;
+$color-solitude:                #f1f4fc;
+
 
 // Gradient
 
@@ -27,9 +29,9 @@ $black-to-right: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0)
 // ---------------------------------
 
 // переменная используемая в html для подключения скейлинга
-$fz-default: 20px;
+$fz-default: 14px;
 
-$ff-lato: "Lato", "Arial", sans-serif;
+$ff-helvetica: "Helvetica", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -56,8 +58,10 @@ $trans-400-ease-in-out:             0.4s $tf-ease-in-out;
 
 $vp-320:                            320px;
 $vp-375:                            375px;
+$vp-390:                            390px;
 $vp-768:                            768px;
 $vp-1024:                           1024px;
+$vp-1200:                           1200px;
 $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
